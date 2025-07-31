@@ -1,0 +1,36 @@
+[project]
+name = "eazure"
+version = "0.0.1"
+authors = [
+{ name="Kiril Boyanov", email="kbo@mbshipbrokers.com" },
+]
+description = "A bunch of functions to make interacting with Azure blob storage files and Azure tables easier"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0",
+    "openpyxl>=3.0",
+    "pyarrow>=18.0.0",
+    "azure-storage-blob>=12.19.0",
+    "azure-cosmosdb-table>=1.0.6",
+    "azure-identity>=1.15.0",
+    "python-dotenv>=1.1.1"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/MaerskBroker/eazure"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"easy_sql" = ["*.csv"]
+
