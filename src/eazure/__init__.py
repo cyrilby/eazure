@@ -4,6 +4,7 @@ from .files import (  # noqa
     write_blob,
     append_to_blob,
     filter_blob,
+    delete_blob_if_exists
 )
 from .tables import (  # noqa
     table_exists,
