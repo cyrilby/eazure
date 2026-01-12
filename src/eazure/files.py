@@ -241,4 +241,33 @@ def filter_blob(
         print(f"The blob {blob_name} does not exist in the container {container_name}.")
 
 
+def delete_blob_if_exists(
+    connection_string: str, container_name: str, blob_name: str
+) -> None:
+    """
+    Deletes a file in Azure blob storage if the file exists
+    in the specified container/directory.
+
+    Args:
+        connection_string (str): connection string in the format provided
+        by the get_access() function
+        container_name (str): name of the container where the file is stored
+        blob_name (str): path to the file inside the container itself
+    """
+    try:
+        blob_service_client = BlobServiceClient.from_connection_string(
+            connection_string
+        )
+        blob_client = blob_service_client.get_blob_client(container_name, blob_name)
+
+        if blob_client.exists():
+            blob_client.delete_blob()
+            print(f"Blob '{blob_name}' deleted.")
+        else:
+            print(f"Blob '{blob_name}' does not exist. No action taken.")
+
+    except Exception as e:
+        print(f"An exception occurred: {e}")
+
+
 # %%
