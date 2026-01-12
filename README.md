@@ -1,6 +1,6 @@
 # Easier read & write access to files and tables stored in Azure Data Lake Storage (ADLS)
 
-* Author: KBO@mbshipbrokers.com
+* Author: github.com/cyrilby
 * Last meaningful update: 31-07-2025
 
 This repository contains Python functions that enable easier read & write access to files stored in Azure Data Lake Storage (ADLS) blobs as well as ADLS tables. The code is structured in such a way that enables installing the repo as a standalone package, which makes it easier to plug and use in other projects.
@@ -142,4 +142,5 @@ The following are not currently implemented as their own functions but could be 
 * list all files and/or folders in a particular blob
 * delete file from blob
 * move file within blob or between blobs
+
 * rename file in blob
