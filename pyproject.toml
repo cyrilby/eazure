@@ -1,8 +1,8 @@
 [project]
 name = "eazure"
-version = "0.0.3"
+version = "0.0.1"
 authors = [
-{ name="Kiril Boyanov", email="kirilboyanovbg@gmail.com" },
+{ name="Kiril Boyanov", email="kbo@mbshipbrokers.com" },
 ]
 description = "A bunch of functions to make interacting with Azure blob storage files and Azure tables easier"
 readme = "README.md"
